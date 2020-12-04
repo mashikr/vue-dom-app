@@ -1,12 +1,11 @@
 <template>
-    <div class="col-sm-6 col-md-4 col-lg-3 mt-2">
+   
         <div class="card">
             <span class="deteleBtn" @click="deleteItem(index)">&times;</span>
-            <div class="card-body">
+            <div class="card-body" style="white-space: pre">
                 <slot></slot>
             </div>
         </div>
-    </div>
 </template>
 
 <script>

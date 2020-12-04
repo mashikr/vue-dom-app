@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="card-columns">
         <app-note v-for="(note, index) in notes" :index="index" :key="note">{{ note }}</app-note>
     </div>
 </template>
@@ -13,3 +13,21 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    @media (min-width: 576px) {
+        .card-columns {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .card-columns {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+        }
+    }
+</style>
